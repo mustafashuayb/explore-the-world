@@ -1,209 +1,596 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head> 
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the World</title>
 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Explore the World</title> 
-    
-    
     <style>
-    
-    
-    img 
-    { 
-    width: 300px; 
-    height: 200px; 
-    object-fit: cover; 
-    } 
-    
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #2660c4, #3bd640);
+            color: #111;
+        }
+
+        nav {
+            background-color: #123c7a;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 25px auto;
+            padding: 25px;
+            width: 85%;
+            max-width: 1000px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            color: #123c7a;
+        }
+
+        .country-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .country {
+            background-color: #e8f1ff;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1 1 250px;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2660c4;
+            color: white;
+        }
+
+        form {
+            background-color: #e8f1ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, button {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding: 8px;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #2660c4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #123c7a;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #123c7a;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
     </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#continents">Continents</a>
+        <a href="#countries">Countries</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#images">Images</a>
+        <a href="#form">Travel Form</a>
+        <a href="#conclusion">Conclusion</a>
+    </nav>
+
+    <!-- Home Section -->
+    <header id="home">
+        <h1>Welcome To Explore The World</h1>
+
+        <p>
+            Have you ever wondered what our world is like?
+            No? Well, then this website was created especially for you!
+        </p>
+
+        <p>
+            On this website, I will show you different images of countries
+            and continents, along with a table to help you compare the
+            differences between countries. You will also get to explore
+            different cultures, landmarks, foods, languages, and interesting
+            facts from around the world.
+        </p>
+
+        <p>
+            So, what are you waiting for? Let's explore the world!
+        </p>
+    </header>
 
 
-</head> 
-<body style="background: linear-gradient(to bottom right, #2EC4B6, #4CAF50);"> 
-<h1>Welcome To Explore The World</h1> 
+    <!-- Continents Section -->
+    <section id="continents">
+
+        <h2>Continents</h2>
+
+        <p>
+            There are seven continents in the world:
+        </p>
+
+        <ul>
+            <li>Africa</li>
+            <li>Asia</li>
+            <li>Europe</li>
+            <li>North America</li>
+            <li>South America</li>
+            <li>Australia</li>
+            <li>Antarctica</li>
+        </ul>
+
+    </section>
 
 
-<p> 
-    Have you ever wondered what our world is like? 
-    No? Well, then this website was created especially for you! 
-    <br><br> 
-    On this website, I will show you different images of countries and continents, 
-    along with a table to help you compare the differences between countries. 
-    You will also get to explore different cultures, landmarks, foods, languages, 
-    and interesting facts from around the world. 
-    <br><br> So, what are you waiting for? Let's explore the world! 
-</p>
+    <!-- Countries and Cultures Section -->
+    <section id="countries">
+
+        <h2>Countries and Cultures</h2>
+
+        <p>
+            Every country has its own unique culture, including different
+            foods, languages, traditions, clothing, and celebrations.
+        </p>
+
+        <div class="country-container">
+
+            <div class="country">
+                <h3>France</h3>
+                <ul>
+                    <li>Language: French</li>
+                    <li>Famous food: Croissants</li>
+                    <li>Known for: The Eiffel Tower</li>
+                </ul>
+            </div>
+
+            <div class="country">
+                <h3>Japan</h3>
+                <ul>
+                    <li>Language: Japanese</li>
+                    <li>Famous food: Sushi</li>
+                    <li>Known for: Mount Fuji</li>
+                </ul>
+            </div>
+
+            <div class="country">
+                <h3>Kenya</h3>
+                <ul>
+                    <li>Languages: English and Swahili</li>
+                    <li>Famous food: Ugali</li>
+                    <li>Known for: Wildlife and national parks</li>
+                </ul>
+            </div>
+
+            <div class="country">
+                <h3>United States</h3>
+                <ul>
+                    <li>Language: English</li>
+                    <li>Famous food: Burgers</li>
+                    <li>Known for: The Statue of Liberty</li>
+                </ul>
+            </div>
+
+            <div class="country">
+                <h3>India</h3>
+                <ul>
+                    <li>Languages: Hindi and English</li>
+                    <li>Famous food: Biryani</li>
+                    <li>Known for: The Taj Mahal</li>
+                </ul>
+            </div>
+
+            <div class="country">
+                <h3>Australia</h3>
+                <ul>
+                    <li>Language: English</li>
+                    <li>Famous food: Meat pie</li>
+                    <li>Known for: The Sydney Opera House</li>
+                </ul>
+            </div>
+
+            <!-- South America Country -->
+            <div class="country">
+                <h3>Brazil</h3>
+                <ul>
+                    <li>Language: Portuguese</li>
+                    <li>Famous food: Feijoada</li>
+                    <li>Known for: The Amazon Rainforest</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
 
 
+    <!-- Country Comparison Section -->
+    <section id="comparison">
 
-<h2>Continents</h2>
+        <h2>Country Comparison</h2>
 
-<p>
-    There are seven continents in the world:
-</p>
+        <table>
 
-<ul>
-    <li>Africa</li>
-    <li>Asia</li>
-    <li>Europe</li>
-    <li>North America</li>
-    <li>South America</li>
-    <li>Australia</li>
-    <li>Antarctica</li>
-</ul>
+            <tr>
+                <th>Country</th>
+                <th>Continent</th>
+                <th>Language</th>
+                <th>Famous Food</th>
+            </tr>
 
+            <tr>
+                <td>France</td>
+                <td>Europe</td>
+                <td>French</td>
+                <td>Croissants</td>
+            </tr>
 
-<h2>Countries and Cultures</h2>
+            <tr>
+                <td>Japan</td>
+                <td>Asia</td>
+                <td>Japanese</td>
+                <td>Sushi</td>
+            </tr>
 
-<p>
-    Every country has its own unique culture, including different foods,
-    languages, traditions, clothing, and celebrations.
-</p>
+            <tr>
+                <td>Kenya</td>
+                <td>Africa</td>
+                <td>English & Swahili</td>
+                <td>Ugali</td>
+            </tr>
 
-<h3>France</h3>
-<ul>
-    <li>Language: French</li>
-    <li>Famous food: Croissants</li>
-    <li>Known for: The Eiffel Tower</li>
-</ul>
+            <tr>
+                <td>United States</td>
+                <td>North America</td>
+                <td>English</td>
+                <td>Burgers</td>
+            </tr>
 
-<h3>Japan</h3>
-<ul>
-    <li>Language: Japanese</li>
-    <li>Famous food: Sushi</li>
-    <li>Known for: Mount Fuji</li>
-</ul>
+            <tr>
+                <td>India</td>
+                <td>Asia</td>
+                <td>Hindi & English</td>
+                <td>Biryani</td>
+            </tr>
 
-<h3>Kenya</h3>
-<ul>
-    <li>Languages: English and Swahili</li>
-    <li>Famous food: Ugali</li>
-    <li>Known for: Wildlife and national parks</li>
-</ul>
+            <tr>
+                <td>Australia</td>
+                <td>Australia</td>
+                <td>English</td>
+                <td>Meat pie</td>
+            </tr>
 
-<h3>United States</h3>
-<ul>
-    <li>Language: English</li>
-    <li>Famous food: Burgers</li>
-    <li>Known for: The Statue of Liberty</li>
-</ul>
+            <!-- South America Country -->
+            <tr>
+                <td>Brazil</td>
+                <td>South America</td>
+                <td>Portuguese</td>
+                <td>Feijoada</td>
+            </tr>
 
-<h3>India</h3>
-<ul>
-    <li>Languages: Hindi and English</li>
-    <li>Famous food: Biryani</li>
-    <li>Known for: The Taj Mahal</li>
-</ul>
+        </table>
 
-<h3>Australia</h3>
-<ul>
-    <li>Language: English</li>
-    <li>Famous food: Meat pie</li>
-    <li>Known for: The Sydney Opera House</li>
-</ul>
-
-
-
-
-<h2>Country Comparison</h2>
-
-<table border="1">
-    <tr>
-        <th>Country</th>
-        <th>Continent</th>
-        <th>Language</th>
-        <th>Famous Food</th>
-    </tr>
-
-    <tr>
-        <td>France</td>
-        <td>Europe</td>
-        <td>French</td>
-        <td>Croissants</td>
-    </tr>
-
-    <tr>
-        <td>Japan</td>
-        <td>Asia</td>
-        <td>Japanese</td>
-        <td>Sushi</td>
-    </tr>
-
-    <tr>
-        <td>Kenya</td>
-        <td>Africa</td>
-        <td>English & Swahili</td>
-        <td>Ugali</td>
-    </tr>
-
-    <tr>
-        <td>United States</td>
-        <td>North America</td>
-        <td>English</td>
-        <td>Burgers</td>
-    </tr>
-
-    <tr>
-        <td>India</td>
-        <td>Asia</td>
-        <td>Hindi & English</td>
-        <td>Biryani</td>
-    </tr>
-
-    <tr>
-        <td>Australia</td>
-        <td>Australia</td>
-        <td>English</td>
-        <td>Meat pie</td>
-    </tr>
-</table>
+    </section>
 
 
+    <!-- Images and Links Section -->
+    <section id="images">
 
-<h2>Images and Links</h2>
+        <h2>Images and Links</h2>
 
-<p>Here are some images of popular tourist destinations!</p>
+        <p>
+            Here are some images of popular tourist destinations!
+        </p>
 
-    <h3>France</h3>
-    <img src="https://cdn.britannica.com/54/75854-050-E27E66C0/Eiffel-Tower-Paris.jpg"
-        alt="Eiffel Tower in Paris, France">
+        <div class="images">
 
-        <h3>Japan</h3>
-        <img src="https://cdn.britannica.com/03/75503-050-F65891FA/volcanic-cone-Japan-Mount-Fuji.jpg?w=1000"
-             alt="Mount Fuji in Japan">
+            <div>
+                <h3>France</h3>
+                <img
+                    src="https://cdn.britannica.com/54/75854-050-E27E66C0/Eiffel-Tower-Paris.jpg"
+                    alt="Eiffel Tower in Paris, France">
+            </div>
 
-    <h3>Kenya</h3>
-    <img src="https://www.bing.com/th/id/OIP.fOi36Vph5l6pKBC0XUDlJAAAAA?w=190&h=128&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2"
-        alt="Nairobi, Kenya">
+            <div>
+                <h3>Japan</h3>
+                <img
+                    src="https://cdn.britannica.com/03/75503-050-F65891FA/volcanic-cone-Japan-Mount-Fuji.jpg?w=1000"
+                    alt="Mount Fuji in Japan">
+            </div>
 
-    <h3>United States</h3>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Statue_of_Liberty_National_Monument_New_York.jpg"
-        alt="Statue of Liberty in New York, United States">
-    
-    <h3>India</h3>
-    <img src="https://www.bing.com/th/id/OIP.768cgY7rhG9DfB134GWT-wHaE6?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2"
-        alt="Taj Mahal in Agra, India">
+            <div>
+                <h3>Kenya</h3>
+                <img
+                    src="https://www.bing.com/th/id/OIP.fOi36Vph5l6pKBC0XUDlJAAAAA?w=190&h=128&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2"
+                    alt="Nairobi, Kenya">
+            </div>
 
-    <h3>Australia</h3>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/SydneyOperaHouse.jpg"
-        alt="Sydney Opera House in Sydney, Australia">
+            <div>
+                <h3>United States</h3>
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Statue_of_Liberty_National_Monument_New_York.jpg"
+                    alt="Statue of Liberty in New York, United States">
+            </div>
+
+            <div>
+                <h3>India</h3>
+                <img
+                    src="https://www.bing.com/th/id/OIP.768cgY7rhG9DfB134GWT-wHaE6?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2"
+                    alt="Taj Mahal in Agra, India">
+            </div>
+
+            <div>
+                <h3>Australia</h3>
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/98/SydneyOperaHouse.jpg"
+                    alt="Sydney Opera House in Sydney, Australia">
+            </div>
+
+        </div>
 
 
         <h3>Useful Links</h3>
 
         <ul>
-            <li><a href="https://www.britannica.com/place/France">Learn more about France</a></li>
-            <li><a href="https://www.britannica.com/place/Japan">Learn more about Japan</a></li>
-            <li><a href="https://www.britannica.com/place/Kenya">Learn more about Kenya</a></li>
-            <li><a href="https://www.britannica.com/place/United-States">Learn more about the United States</a></li>
-            <li><a href="https://www.britannica.com/place/India">Learn more about India</a></li>
-            <li><a href="https://www.britannica.com/place/Australia">Learn more about Australia</a></li>
+            <li>
+                <a href="https://www.britannica.com/place/France">
+                    Learn more about France
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.britannica.com/place/Japan">
+                    Learn more about Japan
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.britannica.com/place/Kenya">
+                    Learn more about Kenya
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.britannica.com/place/United-States">
+                    Learn more about the United States
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.britannica.com/place/India">
+                    Learn more about India
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.britannica.com/place/Australia">
+                    Learn more about Australia
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.britannica.com/place/Brazil">
+                    Learn more about Brazil
+                </a>
+            </li>
         </ul>
 
+    </section>
 
 
-</body> 
+    <!-- Travel Preferences Form -->
+    <section id="form">
+
+        <h2>Travel Preferences</h2>
+
+        <p>
+            Tell us about your travel preferences!
+        </p>
+
+        <form>
+
+            <label for="continent">
+                Favorite Continent:
+            </label>
+            <br>
+
+            <select id="continent" name="continent">
+
+                <option value="Africa">Africa</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="North America">North America</option>
+                <option value="South America">South America</option>
+                <option value="Australia">Australia</option>
+                <option value="Antarctica">Antarctica</option>
+
+            </select>
+
+            <br>
+
+            <label for="country">
+                Country You Would Like to Visit:
+            </label>
+            <br>
+
+            <input
+                type="text"
+                id="country"
+                name="country"
+                placeholder="Enter a country">
+
+            <br>
+
+            <label for="food">
+                Favorite Type of Food:
+            </label>
+            <br>
+
+            <select id="food" name="food">
+
+                <option value="African">African</option>
+                <option value="Asian">Asian</option>
+                <option value="European">European</option>
+                <option value="American">American</option>
+                <option value="South American">South American</option>
+                <option value="Other">Other</option>
+
+            </select>
+
+            <br>
+
+            <label>
+                Travel Preference:
+            </label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="adventure"
+                name="travel"
+                value="adventure">
+
+            <label for="adventure">
+                Adventure
+            </label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="relaxation"
+                name="travel"
+                value="relaxation">
+
+            <label for="relaxation">
+                Relaxation
+            </label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="culture"
+                name="travel"
+                value="culture">
+
+            <label for="culture">
+                Culture and History
+            </label>
+
+            <br><br>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Conclusion Section -->
+    <section id="conclusion">
+
+        <h2>Conclusion</h2>
+
+        <p>
+            The world is filled with many different countries, cultures,
+            languages, foods, and landmarks. Exploring these differences
+            helps us understand and appreciate the diversity of our world.
+        </p>
+
+        <p>
+            I hope this website helped you learn something new and made you
+            interested in exploring different parts of the world.
+        </p>
+
+        <h3>Thanks for Exploring the World! 🌎</h3>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Explore The World &copy; 2026</p>
+    </footer>
+
+</body>
+
 </html>
